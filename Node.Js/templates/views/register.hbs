@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+*{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(136deg,rgb(19, 198, 198),rgb(175, 225, 175));
+    font-family:'Open Sans',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.container{
+    background-color: rgb(236, 255, 220);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.3);
+    width: 400px; 
+}
+h2{
+    text-align: center;
+    margin: 10px;
+    color: rgba(2, 75, 2, 0.551);
+}
+.form{
+    background-color: rgb(236, 255, 220);
+    padding: 20px 40px;
+}
+.form-control{
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control input{
+    border: 2px solid rgba(0, 95, 0, 0.514);
+    background-color: transparent;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus{
+    outline: 0;
+   border:0.3rem solid rgb(193, 225, 193);
+}
+  
+.form button{
+    cursor: pointer;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+.redirect{
+    margin-top: 8px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+a{
+    color: rgba(0, 95, 0);
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <h2> Register Here!</h2>
+    <div class="container">
+    <form action="/register" method="POST" class="form">
+    <div class="brand">
+        <div class="form-control">
+        Name:
+        <input type="text" name="name" value="">
+        </div>
+    <div class="form-control">
+    Mobile No:
+    <input type="number" name="mobile" value="">
+    </div>
+    <div class="form-control">
+    Email:
+    <input type="email" name="email" value="">
+    </div>
+    <div class="form-control">
+    Date of Birth:
+    <input type="date" name="date" id="">
+    </div>
+    <div class="form-control">
+    Username:
+    <input type="text "name="uname">
+    </div>
+    <div class="form-control">
+    password:
+    <input type="password" name="password" value="">
+    </div>
+    <div class="form-control">
+    confirm password:
+    <input type="password" name="confirmpassword" value="">
+    </div>
+    <button type="submit" value="Register">Register</button><br>
+    </div>
+    <div class="redirect">
+     <span class="alreadyUser"> Already have an account ? <a href="/login">Login</a> here
+    </span></div>
+    </form>
+</div>
+</body>
+</html>
